@@ -8,6 +8,7 @@ pipeline {
                     image 'node:18-alpine'
                     reuseNode true
                 }
+            }
             steps {
                 sh '''
                     ls -la
@@ -17,7 +18,6 @@ pipeline {
                     npm run build
                     ls -la
                 '''
-            }
             }
         }
     }
